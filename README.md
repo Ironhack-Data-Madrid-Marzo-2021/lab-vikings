@@ -38,6 +38,10 @@ So, let's say you have already created the class for Soldiers.
 2. Make sure you save the changes in your editor
 3. In your terminal, run the test file for that class
 
+```bash
+$ python3 1-testSoldier.py -v
+```
+
 ### Correct Test
 
 When the tests are all correct you will receive the following message in the terminal.
