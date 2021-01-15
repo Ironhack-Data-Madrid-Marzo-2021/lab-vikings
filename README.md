@@ -11,7 +11,10 @@ In this laboratory you will work with the concept of inheritance in Python.
 You will find the following files in the folder of this laboratory:
 
 - `vikingsClasses.py`
-- `tests.py`
+- `1-testSoldier.py`
+- `2-testVikings.py`
+- `3-testSaxons.py`
+- `4-testWar.py`
 
 You are free to use any of the code editors you have to open these files.
 
@@ -25,34 +28,36 @@ Modify the file `vikingsClasses.py` so that all the tests are correct.
 
 ## Tests
 
-Best way to know how our code is doing is to work with tests. To test the `vikingsClases.py` file step by step you can comment and uncomment lines of code of `tests.py`.
+Best way to know how our code is doing is to work with tests. You will test the `vikingsClases.py` file step by step. 
 
-To run the battery of tests you must enter the following command line through the terminal.
+You will **only** be **editing** the vikingsClasses.py. The files you will **running** to test your code are the following: 1-testsSoldier.py, 2-testsVikings.py, 3-testsSaxons.py & 4-testsWar.py, depending on how far you have written your code. 
 
-```
-% > python3 <FILE-NAME>.py -v
-```
+So, let's say you have already created the class for Soldiers.
 
-To run a single test you must enter the following command line through the terminal.
-
-```
-% > python3 <FILE-NAME>.py -v -k <TEST-NAME>
-```
+1. You wrote your code
+2. Make sure you save the changes in your editor
+3. In your terminal, run the test file for that class
 
 ### Correct Test
 
 When the tests are all correct you will receive the following message in the terminal.
 
 ```
-% > python3 tests.py -v
+$ python3 tests.py -v
 
-testSaxon (__main__.MyTest) ... ok
-testSoldier (__main__.MyTest) ... ok
-testViking (__main__.MyTest) ... ok
-testWar (__main__.MyTest) ... ok
+testAttackHasNoParams (__main__.TestSoldier) ... ok
+testAttackRetunsStrength (__main__.TestSoldier) ... ok
+testAttackShouldBeFunction (__main__.TestSoldier) ... ok
+testCanReceiveDamage (__main__.TestSoldier) ... ok
+testConstructorSignature (__main__.TestSoldier) ... ok
+testHealth (__main__.TestSoldier) ... ok
+testReceiveDamageReturnNone (__main__.TestSoldier) ... ok
+testReceivesDamage (__main__.TestSoldier) ... ok
+testReceivesDamageHasParams (__main__.TestSoldier) ... ok
+testStrength (__main__.TestSoldier) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.001s
+Ran 10 tests in 0.001s
 
 OK
 ```
@@ -62,25 +67,29 @@ OK
 When any test is incorrect you will receive the following message in the terminal. It means that you must keep making changes in the `vikingsClasses.py` file.
 
 ```
-$ > python3 tests.py -v
+$ python3 tests.py -v
 
-testSaxon (__main__.MyTest) ... FAIL
-testSoldier (__main__.MyTest) ... ok
-testViking (__main__.MyTest) ... ok
-testWar (__main__.MyTest) ... ok
+testAttackHasNoParams (__main__.TestSoldier) ... ok
+testAttackRetunsStrength (__main__.TestSoldier) ... ok
+testAttackShouldBeFunction (__main__.TestSoldier) ... ok
+testCanReceiveDamage (__main__.TestSoldier) ... FAIL
+testConstructorSignature (__main__.TestSoldier) ... ok
+testHealth (__main__.TestSoldier) ... ok
+testReceiveDamageReturnNone (__main__.TestSoldier) ... ok
+testReceivesDamage (__main__.TestSoldier) ... ok
+testReceivesDamageHasParams (__main__.TestSoldier) ... ok
+testStrength (__main__.TestSoldier) ... ok
 
 ======================================================================
-FAIL: testSaxon (__main__.MyTest)
+FAIL: testCanReceiveDamage (__main__.TestSoldier)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "tests.py", line 53, in testSaxon
-    self.assertEqual(len(signature(Saxon).parameters), 2)
-AssertionError: 3 != 2
+  File "1-testsSoldier.py", line 44, in testCanReceiveDamage
+    self.assertEqual(self.soldier.health, self.health + 50)
+AssertionError: 250 != 350
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.002s
-
-FAILED (failures=1)
+Ran 10 tests in 0.001s
 ```
 
 ## Exercise
