@@ -47,7 +47,7 @@ $ python3 1-testSoldier.py -v
 When the tests are all correct you will receive the following message in the terminal.
 
 ```
-$ python3 tests.py -v
+$ python3 1-testSoldier.py -v
 
 testAttackHasNoParams (__main__.TestSoldier) ... ok
 testAttackRetunsStrength (__main__.TestSoldier) ... ok
@@ -71,7 +71,7 @@ OK
 When any test is incorrect you will receive the following message in the terminal. It means that you must keep making changes in the `vikingsClasses.py` file.
 
 ```
-$ python3 tests.py -v
+$ python3 1-testSoldier.py -v
 
 testAttackHasNoParams (__main__.TestSoldier) ... ok
 testAttackRetunsStrength (__main__.TestSoldier) ... ok
