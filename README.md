@@ -245,7 +245,7 @@ Modify the `Saxon`, constructor function, have it inherit from `Soldier` and rei
 
 ---
 
-### (BONUS) War
+### War
 
 Now we get to the good stuff: WAR! Our `War` constructor function will allow us to have a `Viking` army and a `Saxon` army that battle each other.
 
@@ -312,6 +312,14 @@ Returns the current status of the `War` based on the size of the armies.
 - **if the `Saxon` array is empty**, should return _**"Vikings have won the war of the century!"**_
 - **if the `Viking` array is empty**, should return _**"Saxons have fought for their lives and survive another day..."**_
 - **if there are at least 1 `Viking` and 1 `Saxon`**, should return _**"Vikings and Saxons are still in the thick of battle."**_
+
+
+## BONUS
+
+Create a game using the classes you defined. For this, you will need to:
+- Create a new `file.py`
+- Import the classes you defined earlier
+- Define functions to create the workflow of the game: i.e. functions to create teams (maybe you can create random teams with your classmates' names), run the game, etc.
 
 ## Deliverables
 
