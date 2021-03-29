@@ -51,8 +51,6 @@ class Saxon(Soldier):
 # War
 
 import random
-import array as arr
-import numpy as np
 
 class War():
     
@@ -72,4 +70,49 @@ class War():
         some_viking_attacking = random.choice(saxonArmy)
         some_saxon_defending = random.choice(vikingArmy)
 
-        some_viking_attacking
+            if some_saxon_defending.health <= 0:
+            saxonArmy.remove(saxon)
+    
+# War
+
+import random
+import array as arr
+import numpy as np
+
+class War():
+    
+    def __init__(self):
+        self.vikingArmy = []
+        self.saxonArmy = []
+
+    def addViking(self,viking):
+        self.vikingArmy.append(viking)
+        print(self.vikingArmy)
+        
+    def addSaxon(self,saxon):
+        self.saxonArmy.append(saxon)
+        print(self.saxonArmy)
+
+    def vikingAttack(self, vikingArmy, saxonArmy):
+        some_viking_attacking = random.choice(saxonArmy)
+        some_saxon_defending = random.choice(vikingArmy)
+        
+        if some_saxon_defending.health <= 0:
+            saxonArmy.remove(saxon)
+            
+            
+    
+    #some_saxon_attacking.damageReceived()
+        
+War()
+        
+        
+
+
+    #def saxonAttack():
+
+
+    #def showStatus():
+    
+
+
