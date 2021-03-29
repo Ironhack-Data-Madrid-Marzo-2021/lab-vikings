@@ -11,7 +11,6 @@ class Soldier:
     def attack(self):
         return self.strength
     def receiveDamage(self,damage):
-        self.damage = damage
         self.health -= self.damage
     
 
@@ -40,14 +39,9 @@ class Viking(Soldier):
 # Saxon
 
 class Saxon(Soldier):
-    def __init__(self, health, strength):
-        super().__init__(health,strength)
-
-    def attack(self):
-        return self.strength
 
     def receiveDamage(self,damage):
-        self.health -= damage
+        super().receiveDamage(damage)
 
         if self.health > 0:
             return f"A Saxon has received {damage} points of damage"
@@ -66,12 +60,12 @@ class War():
         self.vikingArmy = []
         self.saxonArmy = []
 
-    def addViking(self,viking):
-        self.vikingArmy.append(viking)
+    def addViking(self,Viking):
+        self.vikingArmy.append(Viking)
         print(self.vikingArmy)
         
-    def addSaxon(self,saxon):
-        self.saxonArmy.append(saxon)
+    def addSaxon(self,Saxon):
+        self.saxonArmy.append(Saxon)
         print(self.saxonArmy)
 
     def vikingAttack(self, vikingArmy, saxonArmy):
