@@ -1,6 +1,6 @@
 
 # Soldier
-
+hola = "soy Pablo"
 
 class Soldier:
     pass
