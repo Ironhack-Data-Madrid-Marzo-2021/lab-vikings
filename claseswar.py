@@ -1,6 +1,8 @@
-
 import random
-
+import time
+import os
+import sys
+from IPython.display import clear_output
 
 def introduce_numero ():
     
@@ -11,8 +13,6 @@ def introduce_numero ():
         int: selected number
     """
     
-    numero = ''
-    
     while True:
         numero = input('Por favor introduce la opción deseada: ')
         if numero.isnumeric():
@@ -21,6 +21,82 @@ def introduce_numero ():
             
         else:
             print ('debes introducir un valor adecuado')
+
+def jugar_guerra (num_warriors):
+
+    lista_cansancio_01 = ['a', 'b', 'c', 'd', 'e']
+    lista_cansancio_02 = ['f', 'f', 'h', 'i', 'j']
+
+    while len(lista_cansancio_01) > 0 and len(lista_cansancio_02) > 0: 
+        guerra_01 = War(num_warriors)
+
+        for x in range (self.num_warriors - 1):
+            guerra_01.self.vikingArmy.append(lista_cansancio_01[x])
+            guerra_01.self.saxon.saxonArmy.append(lista_cansancio_02[x])
+
+        batallas = list(zip(lista_cansancio_01, lista_cansancio_02))
+
+    
+        for contador in range(len(batallas()) - 1):
+            viking_index = 0
+
+            guerra_01.self.saxon.receiveDamage(guerra_01.self.attack(batallas[contador][1]):)
+            guerra_01.self.vikingo.receiveDamage(guerra_01.self.attack(batallas[contador][0):)
+            contador += 1
+
+        respuesta = return(guerra_01.self.showStatus())
+        time.sleep(4)
+
+
+
+
+
+def menu_opciones():
+    
+    opcion_menu = 0
+    num_warriors = 3
+
+    while opcion_menu == 1 or opcion_menu == 2 or opcion_menu == 3:
+
+        print ('''
+
+    ▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪
+    ------------------⚔⚔⚔⚔⚔⚔-------------------
+    -------------SELECCIONA TU GUERRA------------
+
+    1.- La guerra que damos a los TA
+    
+    2.- Guerra de la inmutabilidad
+    
+    3.- Guerra del pepoloneso 8
+
+    ---------------------------------------------
+    ---------------------------------------------
+    ▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪▫▪
+    '''
+            )
+
+        # esta opción es para que en caso de que el usuario haya introducido un valor distinto a los del menú, llamarle la atención a ello
+        #if opcion_menu != 0:
+        #    print ('Tienes que introducir una opción válida') 
+            
+        opcion_menu = introduce_numero()
+
+        if opcion_menu == 1:
+            num_warriors = 3
+            opcion_menu = 1
+        
+        elif opcion_menu == 2:
+            num_warriors = 4
+            opcion_menu = 2
+
+        elif opcion_menu == 3:
+            num_warriors = 4
+            opcion_menu = 3
+
+        else:
+            clear_output()
+
 
 
 # Soldier
@@ -81,7 +157,7 @@ class Saxon(Soldier):
 
 
 class War:
-    def __init__ (self):
+    def __init__ (self, num_warriors):
         self.vikingArmy = list()
         self.saxonArmy = list()
 
