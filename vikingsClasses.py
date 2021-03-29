@@ -1,4 +1,4 @@
-import random
+
 # Soldier
 
 class Soldier:
@@ -53,47 +53,47 @@ class Saxon(Soldier):
 
 
 # War
+import random 
+class War():
 
-class War:
-    vikingArmy = []
-    saxonArmy = [""]
-    random_saxon = random.choice(saxonArmy)
-    def __init__(self.):
+    def __init__(self):
         self.vikingArmy = []
         self.saxonArmy = []
         
     
     def addViking(self, Viking):
-        self.Viking = Viking
-        self.vikingArmy.append(self.Viking)
+        self.vikingArmy.append(Viking)
     
     def addSaxon(self, Saxon):
-        self.Saxon = Saxon
-        self.saxonArmy.append(self.Saxon)
-    
+        self.saxonArmy.append(Saxon)
+        
     def vikingAttack(self):
-        self.random_viking = random.choice(self.vikingArmy)
-        self.health -= self.strength
-        if self.health <= 0:
-            self.saxonArmy.remove(self.random_saxon)
-            return f"{self.random_saxon} have died"
-        if self.health(self.random_saxon) > 0:
-            return random_saxon.receiveDamage(Saxon) 
-            
+        viking = random.choice(self.vikingArmy)
+        saxon = random.choice(self.saxonArmy)
+
+        damage = saxon.receiveDamage(viking.attack())
+
+        print(self.saxonArmy)
+        print(viking.strength)
+        print(saxon.health)
+        if saxon.health <= 0:
+            self.saxonArmy.remove(saxon)
+        return damage
+
+
     def saxonAttack(self):
-        self.random_viking = random.choice(self.vikingArmy)
-        self.random_saxon = random.choice(self.saxonArmy)
-        self.health -= self.strength
-        if self.health <= 0:
-            self.vikingArmy.remove(self.random_viking)
-            return f"{self.random_viking} have died"
-        if self.health(self.random_viking) > 0:
-            return random_saxon.receiveDamage(viking) 
+        saxon = random.choice(self.saxonArmy)
+        viking = random.choice(self.vikingArmy)
+        damage = viking.receiveDamage(saxon.attack())
+        if viking.health <= 0: 
+            self.vikingArmy.remove(viking)
+        return damage
 
     def showStatus(self):
-        if len.saxonArmy == 0:
+
+        if not self.saxonArmy:
             return "Vikings have won the war of the century!"
-        if len.vikingArmy == 0:
+        elif not self.vikingArmy:
             return "Saxons have fought for their lives and survive another day..."
-        if len.saxonArmy == 1 and len.vikingArmy == 1:
-            return "Vikings and Saxons are still in the thick of battle."
+        else:
+            return  "Vikings and Saxons are still in the thick of battle."
