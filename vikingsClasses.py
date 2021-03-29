@@ -70,24 +70,24 @@ class War():
             self.saxonArmy.append(name)
 
     def vikingAttack(self):
-        v = random.choice(self.vikingArmy)
-        s = random.choice(self.saxonArmy)
+        viking_1 = random.choice(self.vikingArmy)
+        saxon_1 = random.choice(self.saxonArmy)
 
-        damage_saxon = s.receiveDamage(v.attack())
+        damage_saxon = saxon_1.receiveDamage(viking_1.attack())
         
-        if s.health <= 0:
-            self.saxonArmy.remove(s)
+        if saxon_1.health <= 0:
+            self.saxonArmy.remove(saxon_1)
 
         return damage_saxon
             
     def saxonAttack(self):
-        u = random.choice(self.vikingArmy)
-        i = random.choice(self.saxonArmy)
+        otro_vikingo = random.choice(self.vikingArmy)
+        otro_saxon = random.choice(self.saxonArmy)
 
-        damage_viking = u.receiveDamage(i.attack())
+        damage_viking = otro_vikingo.receiveDamage(otro_saxon.attack())
         
-        if u.health <= 0:
-            self.vikingArmy.remove(u)
+        if otro_vikingo.health <= 0:
+            self.vikingArmy.remove(otro_vikingo)
     
         return damage_viking
 
