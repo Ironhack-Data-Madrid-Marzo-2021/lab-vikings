@@ -8,7 +8,7 @@ In this laboratory you will work with the concept of inheritance in Python.
 
 ### Getting Started
 
-You will find the following files in the folder of this laboratory:
+You will find the following files in the folder of this laboratory: 
 
 - `vikingsClasses.py`
 - `1-testSoldier.py`
