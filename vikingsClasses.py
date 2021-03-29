@@ -54,14 +54,28 @@ class Saxon(Soldier):
         else:
             return "A Saxon has died in combat"
 
-    
-    
-
-
-
-
 # War
 
+import random
+import array as arr
+import numpy as np
 
-class War:
-    pass
+class War():
+    
+    def __init__(self):
+        self.vikingArmy = []
+        self.saxonArmy = []
+
+    def addViking(self,viking):
+        self.vikingArmy.append(viking)
+        print(self.vikingArmy)
+        
+    def addSaxon(self,saxon):
+        self.saxonArmy.append(saxon)
+        print(self.saxonArmy)
+
+    def vikingAttack(self, vikingArmy, saxonArmy):
+        some_viking_attacking = random.choice(saxonArmy)
+        some_saxon_defending = random.choice(vikingArmy)
+
+        some_viking_attacking
