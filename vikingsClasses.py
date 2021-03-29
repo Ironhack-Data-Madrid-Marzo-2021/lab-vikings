@@ -49,10 +49,10 @@ class War:
     def __init__(self):
         self.vikingArmy = []
         self.saxonArmy = []
-    def addViking(self, viking1=1):
-        return self.vikingArmy.append(viking1)
-    def addSaxon(self, saxon1=1):
-        return self.saxonArmy.append(saxon1)
+    def addViking(self, Viking):
+        return self.vikingArmy.append(Viking)
+    def addSaxon(self, Saxon):
+        return self.saxonArmy.append(Saxon)
     def vikingAttack(self):
         randomSaxon = random.choice(self.saxonArmy)
         randomViking = random.choice(self.vikingArmy)
