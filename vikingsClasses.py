@@ -46,7 +46,7 @@ class Saxon(Soldier):
 
     def receiveDamage(self, damage):
         self.damage = damage
-        self.health = self.health - damage
+        self.health = self.health - damage # Esto creo que es asi pero no estoy seguro
         if self.health > 0:
             return "A Saxon has received" + str(damage) + "points of damage"
         else:
